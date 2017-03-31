@@ -1,7 +1,9 @@
 Easy tuning of CP/M for actual RAM size
 
 Author - Alexey V. Voronin @ FoxyLab © 2017
+
 https://www.acdc.foxylab.com
+
 getcpm licensed under the GPL v3.0.
 
 Build:
