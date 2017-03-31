@@ -20,3 +20,7 @@ YYYYYYYYYYYY - CP/M serial number (hex)
 Example:
 
 getcpm 32 010203040506
+
+Result:
+
+CPMXXK.SYS file (CCP & BDOS)
