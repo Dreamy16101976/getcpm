@@ -45,9 +45,10 @@ func main() {
 	var count uint16
 	var offset uint8
 	var ram int
+	var cs uint8
 	const SERIAL_1 uint16 = 808
 	const SERIAL_2 uint16 = 2048
-	const SERIAL_LEN uint16 = 16
+	const SERIAL_LEN uint16 = 6
 	const TEMPLATE_FILE string = "CPM00K.SYS"
 	const DIFF_FILE string = "CPMDIFF.SYS"
 
@@ -89,6 +90,7 @@ func main() {
 		count = 0 //reset changes counter
 		tgt := make([]byte, length_00) //target bytes array init
 		//adresses changes
+		cs = 0  //checksum init
 		for i = 0; i < length_00; i++ {
 			b_00 = data_00[i]
 			b_01 = data_01[i]
@@ -110,6 +112,9 @@ func main() {
 		for i = 0; i < SERIAL_LEN; i++ {
 			tgt[i+SERIAL_2] = serial_bytes[i]
 		}
+		for i = 0; i < length_00; i++ {
+			cs = cs + tgt[i]
+		}
 		//target file name
 		tgtname := "CPM"
 		tgtname = tgtname + ram_str
@@ -122,6 +127,8 @@ func main() {
 		fmt.Println(tgtname)
 		fmt.Print(count)
 		fmt.Println(" changes are made")
+		fmt.Print("Checksum: ")
+		fmt.Printf("%X", cs)
 	}
 }
 
