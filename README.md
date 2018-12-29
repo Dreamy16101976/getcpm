@@ -6,7 +6,7 @@ Copyright (C) 2017 Алексей "FoxyLab" Воронин<br/>
 Компиляция:<br/>
 <b>go build getcpm.go</b><br/>
 Использование:<br/>
-<b>getcpm XX YYYYYYYYYYYY</b>  :
+<b>getcpm XX YYYYYYYYYYYY</b>  :<br/>
 XX - актуальный размер ОЗУ в Кбайтах;<br/>
 YYYYYYYYYYYY - желаемый серийный номер системы CP/M (hex)<br/> 
 Пример:<br/>
@@ -21,7 +21,7 @@ This software is licensed under the GPL v3.0 License.<br/><br/>
 Build:<br/>
 <b>go build getcpm.go</b><br/>
 Use:<br/>
-<b>getcpm XX YYYYYYYYYYYY</b>  :
+<b>getcpm XX YYYYYYYYYYYY</b>  :<br/>
 XX - actual RAM size (KBytes);<br/>
 YYYYYYYYYYYY - CP/M serial number (hex)<br/> 
 Example:<br/>
